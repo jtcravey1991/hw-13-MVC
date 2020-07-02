@@ -17,4 +17,4 @@ Express Handlebars is the biggest new package/technology that we used for this h
 
 ![an example of express handlebars code](/images/handlebars.JPG)
 
-![a MVC file structure](/images/files/JPG)
+![a MVC file structure](/images/files.JPG)
