@@ -1,0 +1,25 @@
+<div class="container">
+    <img id="homeBurger" src="/assets/images/burger.png" alt="a burger stacked high" /><br>
+    <h1 class="title">Eat-Da-Burger!</h1><br>
+    <div class="list-container">
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/uneaten-burger}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burgers/eaten-burger}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    <form class="create-form">
+        <textarea id="burgerInput" rows="1" cols="40"></textarea>
+        <button type="submit" id="addButton">Add Burger!</button>
+        <p>Enter a burger you'd like to eat, then press the Add Burger! button</p>
+    </form>
+</div>

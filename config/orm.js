@@ -9,10 +9,10 @@ const orm = {
         });
     },
     insertOne: function(table, col, val, cb) {
-        const queryString = `INSTERT INTO '${table}' (${col.toString()}) VALUES (?);`;
+        const queryString = `INSERT INTO ${table} (${col.toString()}) VALUES (?);`;
         connection.query(queryString, val, function(err, res) {
             if (err) throw err;
-            cb(result);
+            cb(res);
         });
     },
     updateOne: function(table, col, val, condition, cb) {

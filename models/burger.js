@@ -11,7 +11,7 @@ const burger = {
             cb(res);
         });
     },
-    updateOne: function(val, burgerId) {
+    updateOne: function(val, burgerId, cb) {
         orm.updateOne("burgers", "devoured", val, `id = ${burgerId}`, function (res) {
             cb(res);
         });
